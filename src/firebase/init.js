@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Tu configuración de Firebase
+// Tu configuración de Firebase utilizando variables de entorno
 const firebaseConfig = {
-  apiKey: "AIzaSyC8JfK5XBQj99F1BCWaPNLCigK0P4OTWII",
-  authDomain: "vue-js-login-9e07e.firebaseapp.com",
-  projectId: "vue-js-login-9e07e",
-  storageBucket: "vue-js-login-9e07e.appspot.com",
-  messagingSenderId: "918871727082",
-  appId: "1:918871727082:web:4d88c38b438aeb3ccf3093",
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
 };
 
 // Inicializar Firebase
